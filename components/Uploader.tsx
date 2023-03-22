@@ -31,16 +31,6 @@ const Uploader: React.FC<UploaderProps> = () => {
 
     try {
       const response = await axios.post("/api/transcribe", formData);
-      // const response = await axios.post(
-      //   "https://api.openai.com/v1/audio/transcriptions",
-      //   formData,
-      //   {
-      //     headers: {
-      //       // "Content-Type": "multipart/form-data",
-      //       Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPEN_API_KEY}`,
-      //     },
-      //   }
-      // );
       console.log("Whisper ASR API response:", response.data);
       setTranslation(response.data);
     } catch (error) {

@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 import formidable from "formidable";
@@ -41,14 +40,11 @@ export default async function handler(
           );
         });
 
-        // const formData = req.body;
-        // console.log({formData})
         const response = await axios.post(
           "https://api.openai.com/v1/audio/transcriptions",
           formData,
           {
             headers: {
-              // "Content-Type": "multipart/form-data",
               ...formData.getHeaders(),
               Authorization: `Bearer ${process.env.OPEN_API_KEY}`,
             },
