@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+
+Create a `.env` file and add your `OPEN_API_KEY=`
+
+
 First, run the development server:
 
 ```bash
